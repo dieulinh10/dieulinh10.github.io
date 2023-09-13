@@ -212,34 +212,16 @@
 	var parallax = function() {
 		$(window).stellar();
 	};
-	$("#submit-attending").on("click", function() {
-		console.log("OK");
-		var nameValue = document.getElementById('name').value;
-		var emailValue = document.getElementById('email').value;
-		console.log(nameValue, emailValue);
-		if(emailValue == "" || nameValue == "") {
-			alert("Hãy nhập tên và email của bạn vào trước!");
-		}
-		else{
-			var jsonData = {
-				name: nameValue,
-				email: emailValue
-			};
-			var jsonResult = JSON.stringify(jsonData);
-			console.log(jsonResult);
-		}
-		
-	});
+	
 	function displayImage() {
-		var image = document.getElementById('show-no-attending');
-		image.style.display = 'block';
-		console.log("displayImage");
+		var image = document.getElementById('qr-code');
+		image.style.display = 'flex';
 	  }
 	  
 	  function hideImage() {
-		var image = document.getElementById('show-no-attending');
+		var image = document.getElementById('qr-code');
 		image.style.display = 'none';
-		console.log("hideImage");
+		showAndHidePr(false, false);
 	  }
 	  var isShownImage = false;
 	  $("#no-attending").click(() => {
@@ -250,6 +232,34 @@
 		else
 			hideImage()
 	  });
+	  var isShowB = false;
+	  var isShowG = false;
+	  $("#btn-show-bride").click(() => {
+		isShowB = !isShowB;
+		isShowG = false;
+		if(isShowB === true){
+			showAndHidePr(true, false);
+		}
+		else{
+			showAndHidePr(false, false);
+		}
+	  });
+	  $("#btn-show-bridegroom").click(() => {
+		isShowG = !isShowG;
+		isShowB = false;
+		if(isShowG === true){
+			showAndHidePr(false, true);
+		}
+		else{
+			showAndHidePr(false, false);
+		}
+	  });
+	  var showAndHidePr = function(isShowBride, isShowBridegroom){
+		var imageBride = document.getElementById('show-bride');
+		var imageBridegroom = document.getElementById('show-bridegroom');
+		imageBride.style.display = isShowBride ? 'block': "none";
+		imageBridegroom.style.display = isShowBridegroom ? 'block': "none";
+	  }
 	$(function(){
 		//mobileMenuOutsideClick();
 		parallax();
