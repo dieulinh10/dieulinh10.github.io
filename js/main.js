@@ -276,7 +276,9 @@
         audio.src = audioFiles[audioIndex];
         audio.play();
       } else {
-        audioIndex = 0;  // Reset index for looping
+        audioIndex = 0;
+		audio.src = audioFiles[audioIndex];
+        audio.play();  
       }
     }, false);
 
