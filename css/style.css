@@ -1847,6 +1847,7 @@ iframe{
 }
 .show-no-attending{
   text-align: center;
+  justify-content: center;
 }
 .image-no-attending{
   width: 80%;

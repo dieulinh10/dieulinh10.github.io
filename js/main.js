@@ -260,6 +260,26 @@
 		imageBride.style.display = isShowBride ? 'block': "none";
 		imageBridegroom.style.display = isShowBridegroom ? 'block': "none";
 	  }
+	  var audioIndex = 0;
+    var audioFiles = ['audio/IDo.mp3', 'audio/BeautifulInWhite.mp3']; // Add more audio files to the array if needed
+    var audio = new Audio();
+	// document.getElementById('play-audio').addEventListener
+	$('#play-audio').click(() => {
+		console.log("Audio playing: " + audioFiles[audioIndex]);
+        audio.src = audioFiles[audioIndex];
+        audio.play();
+	});
+
+    audio.addEventListener('ended', function() {
+      audioIndex++;
+      if (audioIndex < audioFiles.length) {
+        audio.src = audioFiles[audioIndex];
+        audio.play();
+      } else {
+        audioIndex = 0;  // Reset index for looping
+      }
+    }, false);
+
 	$(function(){
 		//mobileMenuOutsideClick();
 		parallax();

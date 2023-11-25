@@ -125,7 +125,7 @@
         {
           year: 2023,
           month: 11,
-          day: 2,
+          day: 3,
           hours: 0,
           minutes: 0,
           seconds: 0,
@@ -166,7 +166,7 @@
     targetTmpDate = new Date(
       2023,
       11,
-      2,
+      3,
       parameters.hours,
       parameters.minutes,
       parameters.seconds
