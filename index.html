@@ -104,9 +104,9 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Hello!</h2>
-					<h3 style="margin-bottom: 0px;">Chủ Nhật, 24/9/2023 </h3>
-					<p>(Tức 10/8 năm Quý Mão)</p>
-					<h3 style="font-size: 20px;">Thôn Ninh Tập - X. Đại Tập - H. Khoái Châu - Hưng Yên</h3>
+					<h3 style="margin-bottom: 0px;">Thứ 7, 2/12/2023 </h3>
+					<p>(Tức 20/10 năm Quý Mão)</p>
+					<h3 style="font-size: 20px;">TDP Thắng Lợi Hạ, TT Nham Biền, Yên Dũng, Bắc Giang.</h3>
 					<p>Chúng tôi mời bạn đến dự đám cưới của chúng tôi</p>
 				</div>
 			</div>
@@ -134,7 +134,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+	<div id="fh5co-event" class="fh5co-bg" style="background-image: url('images/diachi_bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -146,21 +146,28 @@
 			<div class="row">
 				<div class="display-t">
 					<div class="display-tc">
-						<div class="col-md-10 col-md-offset-1">
-							<div class="col-md-6 col-sm-6 text-center">
-								<div class="event-wrap animate-box">
-									<h3>Lễ chính</h3>
-									<div class="event-col">
-										<i class="icon-clock"></i>
-										<span>9:00 AM</span>
-										<!-- <span>6:00 PM</span> -->
+						<div class="col-md-12" style="display: flex; justify-content: center;">
+							<div class="col-md-10 col-sm-10 col-xs-12 text-center">
+								<div class="event-wrap animate-box" style='display: flex; justify-content: space-between; padding: 15px; align-items: center;'>
+									<!-- <h3 style="font-family: 'Charmonman', cursive;">Lễ chính</h3> -->
+									<div style='width: 50%; border-right: 1px solid rgb(255 255 255 / 50%);'>
+										<div>
+										<!-- <i class="icon-clock"></i> -->
+										<span style='font-size: 14px;'>9:00 AM</span>
+										</div>
+										<div>
+											<!-- <i class="icon-calendar"></i> -->
+											<div style='font-size: 14px;'><span>2 Tháng 12, 2023</span></div>
+											
+											<div style='font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>TDP Thắng Lợi Hạ,&nbsp;</span><span>TT Nham Biền,</span></div>
+											<div style='font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span> Yên Dũng,&nbsp;</span><span>Bắc Giang.</span></div>
+										</div>
 									</div>
-									<div class="event-col">
-										<i class="icon-calendar"></i>
-										<span>Chủ Nhật 24</span>
-										<span>Tháng 9, 2023</span>
+									<div style='width: 50%;'>
+										<h1 style="color: white; font-size: 24px; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Trường Thành</h1>
+										<h1 style="color: white; font-size: 24px; padding: 0; margin: 0; ">&</h1>
+										<h1 style="color: white; font-size: 24px; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Diệu Linh</h1>
 									</div>
-									<p>Thôn Ninh Tập - X. Đại Tập - H. Khoái Châu - Hưng Yên</p>
 								</div>
 							</div>
 							<!-- <div class="col-md-6 col-sm-6 text-center">
@@ -511,15 +518,15 @@
 				</div>
 			</div>
 			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="form-inline" id="form-attending">
-						<div class="col-md-4 col-sm-4">
+				<div class="col-md-12" >
+					<div class="form-inline" style='display: flex ;flex-direction: column; justify-content: center; align-items: center;' id="form-attending">
+						<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
 								<input type="name" class="form-control" id="name" placeholder="Tên của bạn">
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-4">
+						<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
 							<div class="form-group">
 								<label for="email" class="sr-only">Số điện thoại</label>
 								<input type="number" class="form-control" id="phone" placeholder="Số điện thoại">
@@ -531,30 +538,27 @@
 								<input type="email" class="form-control" id="email" placeholder="Email">
 							</div>
 						</div> -->
-						<div class="col-md-4 col-sm-4">
-							<button id = "submit-attending" class="btn btn-default btn-block">Tôi có thể đến</button>
-							<button id = "no-attending" class="btn btn-default btn-block" style="margin: 10px 10px 10px 0px; 
-							background-color: #773d58;">Tôi không thể đến</button>
-							<div id="qr-code" class="col-md-4 col-sm-4" style="display: flex; flex-direction: column;
+						<div class="col-md-4 col-sm-4" style='display: flex; min-width: 240px; justify-content: space-between; align-items: center; padding-inline: 15px; '>
+							<button id = "submit-attending" class="btn col-md-2 btn-default btn-block " style='margin: 0; width: 45%; height: 40px; padding: 0;'>Có</button>
+							<button id = "no-attending" class="btn col-md-2 btn-default btn-block" style="background-color: #773d58; margin: 0; width: 45%; height: 40px; padding: 0">Không</button>
+						</div>
+						<div id="qr-code" class="col-md-4 col-sm-4" style="display: flex; min-width: 240px; flex-direction: column; margin-top: 20px; 
 							margin-bottom: 0;">
 								<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 0;">
-									<p style="font-size: 14px; margin-bottom: 0;">LÌ XÌ GÓP VUI</p>
+									<p style="font-size: 14px; margin-bottom: 10px;">LÌ XÌ GÓP VUI</p>
 								</div>
-								<div style="display: flex;" >
-									<button id="btn-show-bridegroom" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 50%;
-									margin: 10px 10px 10px 10px;
+								<div style="display: flex; justify-content: space-between; margin-bottom: 20px;" >
+									<button id="btn-show-bridegroom" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
 									">Chú rể</button>
-									<button id="btn-show-bride" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 50%;
-									margin: 10px 10px 10px 10px;
+									<button id="btn-show-bride" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
 									">Cô Dâu</button>
 								</div>
 							</div>
-						</div>
 						<div class="show-no-attending" id="show-bride" >
-							<img id="myImage" class="image-no-attending" src="images/nhagai.png" alt="Hình ảnh" >
+							<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nhagai.png" alt="Hình ảnh" >
 						</div>
 						<div class="show-no-attending" id="show-bridegroom" >
-							<img id="myImage" class="image-no-attending" src="images/nha_trai.png" alt="Hình ảnh" >
+							<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nha_trai.png" alt="Hình ảnh" >
 						</div>
 					</div>
 				</div>
