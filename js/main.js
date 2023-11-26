@@ -262,11 +262,14 @@
 	  }
 	  var audioIndex = 0;
     var audioFiles = ['audio/IDo.mp3', 'audio/BeautifulInWhite.mp3']; // Add more audio files to the array if needed
+	var nameSongs = ['I Do - 911', 'Beautiful In White - Shane Filan'];
     var audio = new Audio();
+	var songName = document.getElementById('songName');
 	// document.getElementById('play-audio').addEventListener
 	$('#play-audio').click(() => {
 		console.log("Audio playing: " + audioFiles[audioIndex]);
         audio.src = audioFiles[audioIndex];
+		songName.innerText = nameSongs[audioIndex];
         audio.play();
 	});
 
@@ -274,14 +277,22 @@
       audioIndex++;
       if (audioIndex < audioFiles.length) {
         audio.src = audioFiles[audioIndex];
+		songName.innerText = nameSongs[audioIndex];
         audio.play();
       } else {
         audioIndex = 0;
 		audio.src = audioFiles[audioIndex];
+		songName.innerText = nameSongs[audioIndex];
         audio.play();  
       }
     }, false);
-
+	var progress = document.getElementById("progress");
+	audio.addEventListener('timeupdate', function() {
+	  var duration = audio.duration;
+	  var currentTime = audio.currentTime;
+	  var progressWidth = (currentTime / duration) * 100;
+	  progress.style.width = progressWidth + "%";
+	});
 	$(function(){
 		//mobileMenuOutsideClick();
 		parallax();

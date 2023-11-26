@@ -43,7 +43,17 @@
 	<body>
 		
 	<div class="fh5co-loader"></div>
-	
+	<div id="modal" class="modal">
+		<div class="modal-content">
+		  <span class="close">&times;</span>
+		  <h2>Chào Bạn,</h2>
+		  <p>Chúng tôi rất vui mừng được mời bạn đến dự đám cưới của chúng tôi! Xin hãy nhập tên của bạn:</p>
+		  <form id="nameForm">
+			<input type="text" id="userName" placeholder="Tên của bạn" required>
+			<button type="submit">RSVP</button>
+		  </form>
+		</div>
+	  </div>
 	<div id="page">
 	<nav class="fh5co-nav" role="navigation">
 		<div class="container">
@@ -91,7 +101,14 @@
 							<h1>Thế Hòa &amp; Hoàng Phượng</h1></br>
 							<!-- <h2>We Are Getting Married</h2> -->
 							<div class="simply-countdown simply-countdown-one"></div>
-							<button id="play-audio" style='background-color: #F14E95; border-radius: 14px; color: white; height: 40px; border: none; padding-inline: 15px;'>Play Audio</button>
+							<!-- <button id="play-audio">Play Audio</button> -->
+							<div class="song-info">
+								<p id="songName">Song Name: Your Wedding Song</p>
+							  </div>
+							<div class="progress-container">
+								<div id="progress" class="progress-bar"></div>
+							  </div>
+							<button class="play-button" id="play-audio"></button>
 							<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
 						</div>
 					</div>
@@ -158,16 +175,16 @@
 										</div>
 										<div>
 											<!-- <i class="icon-calendar"></i> -->
-											<div style='font-size: 24px;'><span>2-3 Tháng 12, 2023</span></div>
+											<div class="text-address"><span>2-3 Tháng 12, 2023</span></div>
 											
-											<div style='font-size: 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>TDP Thắng Lợi Hạ,&nbsp;</span><span>TT Nham Biền,</span></div>
-											<div style='font-size: 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span> Yên Dũng,&nbsp;</span><span>Bắc Giang.</span></div>
+											<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span>TDP Thắng Lợi Hạ,&nbsp;</span><span>TT Nham Biền,</span></div>
+											<div class="text-address" style=' display: flex; flex-wrap: wrap; align-items: center; justify-content: center;'><span> Yên Dũng,&nbsp;</span><span>Bắc Giang.</span></div>
 										</div>
 									</div>
 									<div style='width: 50%;'>
-										<h1 style="color: white; font-size: 44px; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Thế Hòa</h1>
-										<h1 style="color: white; font-size: 34px; padding: 0; margin: 0; ">&</h1>
-										<h1 style="color: white; font-size: 44px; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Hoàng Phượng</h1>
+										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Thế Hòa</h1>
+										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; ">&</h1>
+										<h1 class="text-address-name" style="color: white; padding: 0; margin: 0; font-family: 'Charmonman', cursive;">Hoàng Phượng</h1>
 									</div>
 								</div>
 							</div>
@@ -353,7 +370,7 @@
 										<figure>
 											<img src="images/couple-2.png" alt="user">
 										</figure>
-										<span>Đức Anh</span>
+										<span>Hướng Dương</span>
 										<blockquote>
 											<p>"Hãy luôn xây dựng một tổ ấm yêu thương và hạnh phúc, nơi mà mọi ước mơ của hai bạn đều trở thành hiện thực. Chúc mừng đến đám cưới, và cảm ơn vì đã cho chúng tôi cơ hội chia sẻ niềm vui của hai bạn!"</p>
 										</blockquote>
@@ -571,6 +588,7 @@
 	const app = initializeApp(firebaseConfig);
 	const db = getDatabase(app);
 	const dbRef = ref(getDatabase());
+	
 	console.log(typeof(db), db);
 	document.getElementById("submit-attending").addEventListener('click', function(e){
 		e.preventDefault();
@@ -595,7 +613,38 @@
 			location.reload();
 		}
 	});
+	window.onload = function() {
+	var modal = document.getElementById('modal');
+	var body = document.querySelector('body');
+	var closeButton = document.getElementsByClassName('close')[0];
+  
+	modal.style.display = "flex";
+	body.style.overflow = "hidden"; // Disable scrolling when modal is open
+	body.style.backgroundColor = "rgba(0, 0, 0, 0.6)"; // Dark background
+  
+	closeButton.onclick = function() {
+	  modal.style.display = "none";
+	  body.style.overflow = "auto"; // Enable scrolling when modal is closed
+	  body.style.backgroundColor = "#f4f4f4"; // Reset background color
+	}
 	
+	var form = document.getElementById('nameForm');
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		var userNameByE = document.getElementById('userName').value;
+		document.getElementById("name").value = userNameByE;
+		set(ref(db, 'visit/' + userNameByE),
+		{
+			//email: emailValue,
+			username: userNameByE,
+		});
+		alert("Hello, " + userNameByE + "! Welcome to our website!");
+		modal.style.display = "none";
+		body.style.overflow = "auto"; // Enable scrolling when modal is closed
+		body.style.backgroundColor = "#f4f4f4"; // Reset background color
+	});
+  }
+  
   </script>
 
 	</body>
