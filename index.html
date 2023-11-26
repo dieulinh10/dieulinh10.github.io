@@ -61,31 +61,7 @@
 				<div class="col-xs-2">
 					<div id="fh5co-logo"><a href="index.html">Wedding<strong>.</strong></a></div>
 				</div>
-				<!-- <div class="col-xs-10 text-right menu-1">
-					<ul>
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="about.html">Sự kiện</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
-							</ul>
-						</li>
-						<li class="has-dropdown">
-							<a href="gallery.html">Gallery</a>
-							<ul class="dropdown">
-								<li><a href="#">HTML5</a></li>
-								<li><a href="#">CSS3</a></li>
-								<li><a href="#">Sass</a></li>
-								<li><a href="#">jQuery</a></li>
-							</ul>
-						</li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div> -->
+				
 			</div>
 			
 		</div>
@@ -218,7 +194,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<span>Our Memories</span>
 					<h2>Wedding Gallery</h2>
-					<p>Hạnh phúc lớn nhất trong cuộc đời là niềm tin rằng chúng ta được yêu thương; được yêu thương vì chính bản thân mình, hoặc nói cách khác, được yêu thương dù cho có khuyết điểm.</p>
+					<p>Hạnh phúc lớn nhất trong cuộc đời là niềm tin rằng chúng ta được yêu thương, được yêu thương vì chính bản thân mình, hoặc nói cách khác, được yêu thương dù cho có khuyết điểm.</p>
 				</div>
 			</div>
 			<div class="row row-bottom-padded-md">
@@ -418,6 +394,73 @@
 		</div>
 	</div>
 
+	
+	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="row ">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Bạn sẽ tham gia chứ?</h2>
+						<p>Vui lòng điền vào biểu mẫu để thông báo cho bạn rằng bạn đang tham dự. Nếu không hãy ấn vào không.</br> Cảm ơn.</p>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-12" >
+						<div class="form-inline" style='display: flex ;flex-direction: column; justify-content: center; align-items: center;' id="form-attending">
+							<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
+								<div class="form-group">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" class="form-control" id="name" placeholder="Tên của bạn">
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
+								<div class="form-group">
+									<label for="email" class="sr-only">Số điện thoại</label>
+									<input type="number" class="form-control" id="phone" placeholder="Số điện thoại">
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
+								<div class="form-group">
+									<label for="email" class="sr-only">Số người tham dự</label>
+									<input type="number" class="form-control" id="number_people" placeholder="Số người tham dự">
+								</div>
+							</div>
+							<!-- <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+							</div> -->
+							<div class="col-md-4 col-sm-4" style='display: flex; min-width: 240px; justify-content: space-between; align-items: center; padding-inline: 15px; '>
+								<button id = "submit-attending" class="btn col-md-2 btn-default btn-block " style='margin: 0; width: 45%; height: 40px; padding: 0;'>Có</button>
+								<button id = "no-attending" class="btn col-md-2 btn-default btn-block" style="background-color: #773d58; margin: 0; width: 45%; height: 40px; padding: 0">Không</button>
+							</div>
+							<!-- <div id="qr-code" class="col-md-4 col-sm-4" style="display: flex; min-width: 240px; flex-direction: column; margin-top: 20px; 
+								margin-bottom: 0;">
+									<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 0;">
+										<p style="font-size: 14px; margin-bottom: 10px;">LÌ XÌ GÓP VUI</p>
+									</div>
+									<div style="display: flex; justify-content: space-between; margin-bottom: 20px;" >
+										<button id="btn-show-bridegroom" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
+										">Chú rể</button>
+										<button id="btn-show-bride" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
+										">Cô Dâu</button>
+									</div>
+								</div> -->
+							<br />
+							<div class="show-no-attending" id="qr-code" >
+								<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nhagai.png" alt="Hình ảnh" >
+							</div>
+							<!-- <div class="show-no-attending" id="show-bridegroom" >
+								<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nha_trai.png" alt="Hình ảnh" >
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="fh5co-services" class="fh5co-section-gray">
 		<div class="container">
 			<div class="row animate-box" style='display: flex; justify-content: center; align-items: center;'>
@@ -434,73 +477,6 @@
 			</div>
 		</div>
 	</div>
-
-
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Bạn sẽ tham gia chứ?</h2>
-					<p>Vui lòng điền vào biểu mẫu để thông báo cho bạn rằng bạn đang tham dự. Nếu không hãy ấn vào không.</br> Cảm ơn.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-12" >
-					<div class="form-inline" style='display: flex ;flex-direction: column; justify-content: center; align-items: center;' id="form-attending">
-						<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Tên của bạn">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
-							<div class="form-group">
-								<label for="email" class="sr-only">Số điện thoại</label>
-								<input type="number" class="form-control" id="phone" placeholder="Số điện thoại">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4" style='min-width: 240px;'>
-							<div class="form-group">
-								<label for="email" class="sr-only">Số người tham dự</label>
-								<input type="number" class="form-control" id="number_people" placeholder="Số người tham dự">
-							</div>
-						</div>
-						<!-- <div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div> -->
-						<div class="col-md-4 col-sm-4" style='display: flex; min-width: 240px; justify-content: space-between; align-items: center; padding-inline: 15px; '>
-							<button id = "submit-attending" class="btn col-md-2 btn-default btn-block " style='margin: 0; width: 45%; height: 40px; padding: 0;'>Có</button>
-							<button id = "no-attending" class="btn col-md-2 btn-default btn-block" style="background-color: #773d58; margin: 0; width: 45%; height: 40px; padding: 0">Không</button>
-						</div>
-						<!-- <div id="qr-code" class="col-md-4 col-sm-4" style="display: flex; min-width: 240px; flex-direction: column; margin-top: 20px; 
-							margin-bottom: 0;">
-								<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 0;">
-									<p style="font-size: 14px; margin-bottom: 10px;">LÌ XÌ GÓP VUI</p>
-								</div>
-								<div style="display: flex; justify-content: space-between; margin-bottom: 20px;" >
-									<button id="btn-show-bridegroom" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
-									">Chú rể</button>
-									<button id="btn-show-bride" class="btn btn-primary btn-block" style="height: 31px; font-size: 12px; width: 45%; padding: 0; margin: 0;
-									">Cô Dâu</button>
-								</div>
-							</div> -->
-						<br />
-						<div class="show-no-attending" id="qr-code" >
-							<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nhagai.png" alt="Hình ảnh" >
-						</div>
-						<!-- <div class="show-no-attending" id="show-bridegroom" >
-							<img id="myImage" class="image-no-attending"  style='max-width: 300px; object-fit: cover;' src="images/nha_trai.png" alt="Hình ảnh" >
-						</div> -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 
@@ -508,8 +484,8 @@
 				<div class="col-md-12 text-center">
 					<p>
 						<small class="block">&copy; 2023</small> 
-						<small class="block">Designed by Tran Tuan Anh</small>
-						<small class="block">Art by Hung Nguyen</small>
+						<small class="block">Designed by Tran Tuan Anh and Tien Anh</small>
+						<!-- <small class="block">Art by Hung Nguyen</small> -->
 					</p>
 					<p>
 						<ul class="fh5co-social-icons">

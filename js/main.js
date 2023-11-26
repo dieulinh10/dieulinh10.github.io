@@ -221,7 +221,7 @@
 	  function hideImage() {
 		var image = document.getElementById('qr-code');
 		image.style.display = 'none';
-		showAndHidePr(false, false);
+		// showAndHidePr(false, false);
 	  }
 	  var isShownImage = false;
 	  $("#no-attending").click(() => {
@@ -232,37 +232,37 @@
 		else
 			hideImage()
 	  });
-	  var isShowB = false;
-	  var isShowG = false;
-	  $("#btn-show-bride").click(() => {
-		isShowB = !isShowB;
-		isShowG = false;
-		if(isShowB === true){
-			showAndHidePr(true, false);
-		}
-		else{
-			showAndHidePr(false, false);
-		}
-	  });
-	  $("#btn-show-bridegroom").click(() => {
-		isShowG = !isShowG;
-		isShowB = false;
-		if(isShowG === true){
-			showAndHidePr(false, true);
-		}
-		else{
-			showAndHidePr(false, false);
-		}
-	  });
-	  var showAndHidePr = function(isShowBride, isShowBridegroom){
-		var imageBride = document.getElementById('show-bride');
-		var imageBridegroom = document.getElementById('show-bridegroom');
-		imageBride.style.display = isShowBride ? 'block': "none";
-		imageBridegroom.style.display = isShowBridegroom ? 'block': "none";
-	  }
+	//   var isShowB = false;
+	//   var isShowG = false;
+	//   $("#btn-show-bride").click(() => {
+	// 	isShowB = !isShowB;
+	// 	isShowG = false;
+	// 	if(isShowB === true){
+	// 		showAndHidePr(true, false);
+	// 	}
+	// 	else{
+	// 		showAndHidePr(false, false);
+	// 	}
+	//   });
+	//   $("#btn-show-bridegroom").click(() => {
+	// 	isShowG = !isShowG;
+	// 	isShowB = false;
+	// 	if(isShowG === true){
+	// 		showAndHidePr(false, true);
+	// 	}
+	// 	else{
+	// 		showAndHidePr(false, false);
+	// 	}
+	//   });
+	//   var showAndHidePr = function(isShowBride, isShowBridegroom){
+	// 	var imageBride = document.getElementById('show-bride');
+	// 	var imageBridegroom = document.getElementById('show-bridegroom');
+	// 	imageBride.style.display = isShowBride ? 'block': "none";
+	// 	imageBridegroom.style.display = isShowBridegroom ? 'block': "none";
+	//   }
 	  var audioIndex = 0;
-    var audioFiles = ['audio/IDo.mp3', 'audio/BeautifulInWhite.mp3']; // Add more audio files to the array if needed
-	var nameSongs = ['I Do - 911', 'Beautiful In White - Shane Filan'];
+    var audioFiles = ['audio/IDo.mp3', 'audio/BeautifulInWhite.mp3', 'until-you-audio.mp3']; // Add more audio files to the array if needed
+	var nameSongs = ['I Do - 911', 'Beautiful In White - Shane Filan', 'Shayne Ward - Until You'];
     var audio = new Audio();
 	var songName = document.getElementById('songName');
 	// document.getElementById('play-audio').addEventListener
