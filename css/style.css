@@ -1852,5 +1852,110 @@ iframe{
 .image-no-attending{
   width: 80%;
 }
+ .text-address{
+  font-size: 24px;
+ }
+ .text-address-name{
+  font-size: 44px;
+ }
+ .gg-map {
+    width: 600px;
+   height: 450px;
+ }
+ .map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px; /* adjust the height as needed */
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  z-index: 1; 
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background */
+}
 
+.modal-content {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #7c3c3c; /* Elegant color for headings */
+}
+
+.close {
+  color: #7c3c3c;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #b06262; /* Highlight color on hover */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7c3c3c; /* Contrasting button color */
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b06262; /* Lighter color on hover */
+}
+.play-button {
+  /* Existing styles... */
+  z-index: 1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background-color: #f4f4f4; /* Light background for the progress bar container */
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #7c3c3c; /* Progress bar color */
+  width: 0; /* Initial width is 0 */
+}
+ @media screen and (max-width: 768px) {
+  .text-address {
+    font-size: 14px;
+  }
+  .text-address-name{
+    font-size: 24px;
+  }
+  /* .gg-map {
+    width: 350px;
+    height: 250px;
+  } */
+}
 /*# sourceMappingURL=style.css.map */
